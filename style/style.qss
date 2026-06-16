@@ -21,11 +21,75 @@ QMenuBar {
     border-bottom: 1px solid #E5E7EB;
     padding: 3px 8px;
 }
-QMenuBar::item:selected { background: #EEF2FF; border-radius: 3px; }
-QMenu { background: #FFFFFF; border: 1px solid #DDE3EA; padding: 6px; }
-QMenu::item { padding: 7px 22px; border-radius: 3px; }
-QMenu::item:selected { background: #EEF2FF; color: #1D4ED8; }
-QStatusBar { background: transparent; border: none; max-height: 0px; min-height: 0px; }
+QMenuBar {
+    background: #FFFFFF;
+    color: #1F2937;
+    border-bottom: 1px solid #E5E7EB;
+    padding: 3px 8px;
+}
+
+QMenuBar::item {
+    background: transparent;
+    color: #1F2937;
+    padding: 7px 14px;
+}
+
+QMenuBar::item:selected,
+QMenuBar::item:pressed {
+    background: #EEF2FF;
+    color: #1D4ED8;
+    border-radius: 3px;
+}
+
+QMenu {
+    background: #FFFFFF;
+    color: #1F2937;
+    border: 1px solid #DDE3EA;
+    padding: 6px;
+}
+
+QMenu::item {
+    background: transparent;
+    color: #1F2937;
+    padding: 8px 24px;
+    border-radius: 3px;
+}
+
+QMenu::item:selected {
+    background: #EEF2FF;
+    color: #1D4ED8;
+}
+
+QMenu::item:disabled {
+    color: #94A3B8;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #E5E7EB;
+    margin: 5px 8px;
+}
+
+QStatusBar#app_statusbar {
+    background: #FFFFFF;
+    color: #475569;
+    border-top: 1px solid #E5E7EB;
+    min-height: 28px;
+    max-height: 28px;
+    padding: 0 10px;
+}
+
+QStatusBar#app_statusbar::item {
+    border: none;
+}
+
+QLabel#status_members {
+    background: transparent;
+    color: #475569;
+    border: none;
+    padding-left: 4px;
+    font-size: 11px;
+}
 
 /* Sidebar */
 #sidebar {

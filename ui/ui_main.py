@@ -247,9 +247,24 @@ class MainWindow(QMainWindow):
         menu_help.addAction(act_about)
 
     def _build_statusbar(self):
-        # Status bar sengaja disembunyikan agar tidak ada teks kecil di batas bawah layar.
-        self.statusBar().clearMessage()
-        self.statusBar().hide()
+        status = self.statusBar()
+        status.setObjectName("app_statusbar")
+        status.setSizeGripEnabled(False)
+        status.setMinimumHeight(28)
+        status.show()
+
+        self.lbl_status_members = QLabel(
+            "Kelompok 9 — "
+            "Raffi Fatthoni (F1D02310133) • "
+            "Deswita Salsabila (F1D02410004) • "
+            "Oktora Rizka Arifin (F1D02410145)"
+        )
+        self.lbl_status_members.setObjectName("status_members")
+        self.lbl_status_members.setAlignment(
+            Qt.AlignLeft | Qt.AlignVCenter
+        )
+
+        status.addPermanentWidget(self.lbl_status_members, 1)
 
     def _update_logged_user(self, updated_user: dict):
         """Dipanggil dari halaman profil setelah anggota mengubah data akunnya."""
