@@ -1189,13 +1189,10 @@ class MemberProfileWidget(QWidget):
         self.name_label = QLabel()
         self.name_label.setObjectName("profile_name")
         self.name_label.setWordWrap(True)
-        self.username_label = QLabel()
-        self.username_label.setObjectName("profile_meta")
 
         summary.addWidget(self.avatar, 0, Qt.AlignLeft)
         summary.addLayout(photo_actions)
         summary.addWidget(self.name_label)
-        summary.addWidget(self.username_label)
 
         note = QLabel("Foto profil hanya digunakan untuk memperjelas identitas akun di tampilan anggota.")
         note.setObjectName("profile_note")
@@ -1334,7 +1331,6 @@ class MemberProfileWidget(QWidget):
         self._load_current_user()
         self.pending_profile_image_path = None
         self.name_label.setText(str(self.user.get("nama_lengkap", "-")))
-        self.username_label.setText(f"Username: {self.user.get('username', '-')}")
         self.reset_form()
 
         _clear_layout(self.stats_layout)

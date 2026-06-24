@@ -254,9 +254,9 @@ class MainWindow(QMainWindow):
         status.show()
 
         self.lbl_status_members = QLabel(
-            "Kelompok 9 — "
-            "Raffi Fatthoni (F1D02310133) • "
-            "Deswita Salsabila (F1D02410004) • "
+            "Kelompok 9 |   "
+            "Raffi Fatthoni (F1D02310133)  -  "
+            "Deswita Salsabila (F1D02410004)  -  "
             "Oktora Rizka Arifin (F1D02410145)"
         )
         self.lbl_status_members.setObjectName("status_members")

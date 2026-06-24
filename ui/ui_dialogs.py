@@ -1,13 +1,13 @@
 """
 PustakaDesk — ui_dialogs.py
-Dialog peminjaman dan pengembalian buku.
+Halaman dialog untuk pinjam dan kembalikan buku
 """
 
 from datetime import date, timedelta
 
 from PySide6.QtWidgets import (
-    QDialog, QVBoxLayout, QFormLayout, QComboBox,
-    QDateEdit, QLabel, QMessageBox, QDialogButtonBox
+   QDialog, QVBoxLayout, QFormLayout, QComboBox,
+   QDateEdit, QLabel, QMessageBox, QDialogButtonBox
 )
 from PySide6.QtCore import QDate
 
